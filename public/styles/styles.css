@@ -4,17 +4,18 @@ body {
 }
 
 .tomato {
-  background-image: url("http://i.imgur.com/oKQqXoC.jpg");
+  background-image: url("http://i.imgur.com/nu9p0wl.jpg");
   height: 50%;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
 }
 
 .title-box {
   display: inline-block;
   background: #1d1d1d;
   text-align: center;
-  width: 350px;
-  height: 150px;
+  width: 375px;
+  height: 185px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -24,6 +25,21 @@ body {
 
 .title-box h1 {
   color: white;
+  letter-spacing: 3px;
+}
+
+.title-description::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: rgba(255,255,255,0.1);
+  margin: 20px auto;
+}
+
+.title-box h3 {
+  font-family: 'Raleway', sans-serif;
+  color: rgba(255, 255, 255, .4);
 }
 
 .black-bar h3 {
@@ -32,4 +48,13 @@ body {
   height: 67px;
   margin: 0;
   color: white;
+}
+
+.content-section {
+  height: 450px;
+}
+
+footer {
+  height: 350px;
+  background: #1d1d1d;
 }
