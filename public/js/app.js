@@ -1,0 +1,7 @@
+console.log('app.js is loaded');
+
+$(document).ready(function(){
+
+  $(window).stellar();
+
+})
