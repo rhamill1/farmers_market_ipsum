@@ -26,6 +26,7 @@ body {
 .title-box h1 {
   color: white;
   letter-spacing: 3px;
+  transition: color 0.5s;
 }
 
 .title-description::before {
@@ -43,11 +44,19 @@ body {
 }
 
 .black-bar h3 {
+  margin: 0;
+}
+
+.black-bar a {
   display: block;
   background: #1d1d1d;
-  height: 67px;
-  margin: 0;
-  color: white;
+  height: 50px;
+  padding: 2em 0 0 10em;
+  color: rgba(255, 255, 255, .4);
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: color 0.5s;
+  text-decoration: none;
 }
 
 .content-section {
@@ -57,4 +66,13 @@ body {
 footer {
   height: 350px;
   background: #1d1d1d;
+}
+
+
+.title-box h1:hover {
+  color: #1abc9c;
+}
+
+.black-bar a:hover {
+  color: white;
 }
