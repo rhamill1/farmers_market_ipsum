@@ -61,6 +61,26 @@ body {
 
 .content-section {
   height: 450px;
+  margin: 5em 8em;
+}
+
+button {
+  background: #1d1d1d;
+  color: white;
+  border: none;
+  font-size: 12px;
+  padding: 12px 16px;
+  border-radius: 3px;
+  transition-duration: 0.4s;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 footer {
@@ -75,4 +95,9 @@ footer {
 
 .black-bar a:hover {
   color: white;
+}
+
+button:hover {
+  background: #1abc9c;
+  cursor: pointer;
 }

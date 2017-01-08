@@ -1,11 +1,19 @@
 console.log('app.js is loaded');
 
 $(document).ready(function(){
+
   $(window).stellar({
     horizontalScrolling: false
   });
 
+
+  $('#gen-ipsum-btn').on('click', function(formNumber){
+    var formNumber = document.getElementById('form-number').value;
+    console.log(formNumber);
+  });
+
 })
+
 
 $(window).scroll(function(){
   var fromTop = $(document).scrollTop();
@@ -14,3 +22,4 @@ $(window).scroll(function(){
     opacity: opacityValue
   });
 });
+
