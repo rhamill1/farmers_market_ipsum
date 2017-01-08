@@ -10,7 +10,13 @@ $(document).ready(function(){
   $('#gen-ipsum-btn').on('click', function(formNumber){
     var formNumber = document.getElementById('form-number').value;
     console.log(formNumber);
+    render(formNumber);
   });
+
+  function render(data){
+    $('#response').empty();
+    $('#response').append(data);
+  }
 
 })
 
