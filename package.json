@@ -1,0 +1,23 @@
+{
+  "name": "farmers_market_ipsum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhamill1/farmers_market_ipsum.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhamill1/farmers_market_ipsum/issues"
+  },
+  "homepage": "https://github.com/rhamill1/farmers_market_ipsum#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
