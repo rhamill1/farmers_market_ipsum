@@ -61,7 +61,23 @@ body {
 
 .content-section {
   height: 450px;
-  margin: 5em 8em;
+  margin: 3em 8em;
+}
+
+#request {
+  width: 30%;
+  float: left;
+}
+
+#request h1 {
+  margin-top: 0;
+}
+
+#response {
+  margin-top: 1em;
+  width: 70%;
+  float: left;
+  text-align: justify;
 }
 
 button {
