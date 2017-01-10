@@ -60,8 +60,10 @@ body {
 }
 
 .content-section {
-  height: 450px;
   margin: 3em 8em;
+  height: auto;
+  min-height: 50%;
+  overflow: auto;
 }
 
 #request {
@@ -78,6 +80,7 @@ body {
   width: 70%;
   float: left;
   text-align: justify;
+  height: auto;
 }
 
 button {
@@ -103,6 +106,9 @@ input::-webkit-inner-spin-button {
 footer {
   height: 350px;
   background: #1d1d1d;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
 }
 
 
