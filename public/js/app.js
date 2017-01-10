@@ -10,41 +10,47 @@ $(document).ready(function(){
   $('#gen-ipsum-btn').on('click', function(formNumber){
     var formNumber = document.getElementById('form-number').value;
 
-    $.getJSON('/data/ipsum.json', function(json) {
-      var ipsumJson = json;
+    if(formNumber > 9){
+      render("Unfortunately Farmers' Market Ipsum can't write that new organic chutney cookbook for you. Please select between 1 & 9 paragraphs.")
+    } else if (formNumber < 1){
+      render('')
+    } else {
 
-      // create paragraphs
-      var responseText = ''
-      for (var i = formNumber; i > 0; i--) {
-        console.log(i);
+      $.getJSON('/data/ipsum.json', function(json) {
+        var ipsumJson = json;
 
-        // create sentences
-        var paragraph = ''
-        for (var sentCount = 7; sentCount > 0; sentCount--) {
-          // define sentence length
-          minSentLength = Math.ceil(5);
-          maxSentLength = Math.floor(18);
-          var sentLength =  Math.floor(Math.random() * (maxSentLength - minSentLength)) + minSentLength;
+        // create paragraphs
+        var responseText = ''
+        for (var i = formNumber; i > 0; i--) {
 
-          // pick words / create a sentence
-          var sentence = ''
-          for (var workingWordIndex = sentLength; workingWordIndex > 0; workingWordIndex--) {
+          // create sentences
+          var paragraph = ''
+          for (var sentCount = 7; sentCount > 0; sentCount--) {
+            // define sentence length
+            minSentLength = Math.ceil(5);
+            maxSentLength = Math.floor(18);
+            var sentLength =  Math.floor(Math.random() * (maxSentLength - minSentLength)) + minSentLength;
 
-            minWordIndex = Math.ceil(0);
-            maxWordIndex = Math.floor(63);
-            var wordIndexInt =  Math.floor(Math.random() * (maxWordIndex - minWordIndex)) + minWordIndex;
-            var newWord = ipsumJson[Object.keys(ipsumJson)[wordIndexInt]];
-            sentence += ' ' + newWord;
+            // pick words / create a sentence
+            var sentence = ''
+            for (var workingWordIndex = sentLength; workingWordIndex > 0; workingWordIndex--) {
+
+              minWordIndex = Math.ceil(0);
+              maxWordIndex = Math.floor(63);
+              var wordIndexInt =  Math.floor(Math.random() * (maxWordIndex - minWordIndex)) + minWordIndex;
+              var newWord = ipsumJson[Object.keys(ipsumJson)[wordIndexInt]];
+              sentence += ' ' + newWord;
+            }
+            sentence += '. ';
+            var capitalizedSentence = sentence[1].toUpperCase() + sentence.slice(2);
+
+            paragraph += capitalizedSentence;
           }
-          sentence += '. ';
-          var capitalizedSentence = sentence[1].toUpperCase() + sentence.slice(2);
-
-          paragraph += capitalizedSentence;
+          responseText += paragraph += '<br><br>';
         }
-        responseText += paragraph += '<br><br>';
-      }
-      render(responseText);
-    });
+        render(responseText);
+      });
+    };
   });
 
 
