@@ -111,6 +111,42 @@ footer {
   width: 100%;
 }
 
+.inner-footer {
+  margin: 0 3em;
+  padding: 3em 0;
+}
+
+.column {
+  width: 25%;
+  float: left;
+  margin: 0 2em 5em 2em;
+}
+
+.column h3 {
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.footer-column-text {
+  color: #666;
+  text-align: justify;
+}
+
+.footer-column-text a {
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  color: #666;
+  float: left;
+  width: 81%;
+  border-top: 2px solid rgba(255,255,255,0.1);
+  margin: 0 5em 0 5em;
+  padding-top: 9px;
+  letter-spacing: 1px;
+}
 
 .title-box h1:hover {
   color: #1abc9c;
@@ -123,6 +159,10 @@ footer {
 button:hover {
   background: #1abc9c;
   cursor: pointer;
+}
+
+.footer-column-text a:hover {
+  text-decoration: underline;
 }
 
 
